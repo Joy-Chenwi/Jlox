@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static lox.TokenType.*;
+import static com.craftinginterpreters.lox.TokenType.*;
 
 class Scanner {
     private final String source;

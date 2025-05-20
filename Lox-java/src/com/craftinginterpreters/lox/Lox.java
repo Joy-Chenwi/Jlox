@@ -1,4 +1,4 @@
-package com.craftinginterpreters.lox;
+package lox;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,7 +8,8 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 
-import static com.craftinginterpreters.lox.Scanner.*;
+import static lox.Scanner.*;
+import static lox.Token.*;
 
 public class Lox {
     static boolean hadError = false;
@@ -47,7 +48,7 @@ public class Lox {
 
     private static void run(String source) {
         Scanner scanner = new Scanner(source);
-        List<Token> tokens = scanner.scanToken();
+        List<Token> tokens = scanner.scanTokens();
 
         for (Token token : tokens) {
             System.out.println(token);
